@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   span.hpp                                           :+:      :+:    :+:   */
+/*   Span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 23:53:31 by jpceia            #+#    #+#             */
-/*   Updated: 2021/12/19 23:53:34 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/19 23:55:31 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <vector>
 #include <algorithm>
 
-class span
+class Span
 {
     private:
         unsigned int _n;
         std::vector<int> _v;
-        span(void) {};  // forbids default constructor
+        Span(void) {};  // forbids default constructor
     public:
         // Constructors
-        span(unsigned int n);
-        span(const span& rhs);
+        Span(unsigned int n);
+        Span(const Span& rhs);
 
         // Destructor
-        ~span(void);
+        ~Span(void);
 
         // Assignation operator overload
-        span &operator=(span const &rhs);
+        Span &operator=(Span const &rhs);
 
         // Other methods
         void addNumber(int n);
