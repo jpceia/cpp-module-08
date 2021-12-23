@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 23:52:52 by jpceia            #+#    #+#             */
-/*   Updated: 2021/12/20 00:12:20 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/23 03:59:28 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int Span::shortestSpan(void)
     std::vector<int> v(_v);
     std::sort(v.begin(), v.end());
     std::adjacent_difference(v.begin(), v.end(), v.begin());
-    return *std::min_element(v.begin(), v.end());
+    return *std::min_element(v.begin() + 1, v.end());
 }
 
 int Span::longestSpan(void)
