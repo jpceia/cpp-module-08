@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MutantStack.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 00:14:39 by jpceia            #+#    #+#             */
-/*   Updated: 2022/01/04 15:23:11 by jceia            ###   ########.fr       */
+/*   Updated: 2022/01/04 22:08:28 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ class MutantStack : public std::stack<T>
             return *this;
         };
         
-        typedef std::stack<T>::container_type::iterator iterator;
-
+        typedef typename std::stack<T>::container_type::iterator iterator;
+        
         iterator begin(void) { return std::stack<T>::c.begin(); };
         iterator end(void) { return std::stack<T>::c.end(); };
 };
