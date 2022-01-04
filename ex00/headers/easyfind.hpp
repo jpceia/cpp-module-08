@@ -1,17 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   easyfind.cpp                                       :+:      :+:    :+:   */
+/*   easyfind.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 22:41:35 by jpceia            #+#    #+#             */
-/*   Updated: 2021/12/23 03:46:38 by jpceia           ###   ########.fr       */
+/*   Updated: 2022/01/04 18:16:49 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <algorithm>
-#include <iostream>
+#ifndef EASYFIND_HPP
+# define EASYFIND_HPP
+
+# include <algorithm>
+# include <iostream>
+
+// https://stackoverflow.com/questions/11275444/c-template-typename-iterator
 
 template<typename T>
 typename T::iterator easyfind(T &container, int value)
@@ -23,3 +28,5 @@ typename T::iterator easyfind(T &container, int value)
         throw std::exception();
     return it;
 }
+
+#endif
