@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 22:41:38 by jpceia            #+#    #+#             */
-/*   Updated: 2022/01/04 15:01:36 by jceia            ###   ########.fr       */
+/*   Updated: 2022/01/04 18:11:54 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int main(void)
         }
         catch (std::exception &e)
         {
-            std::cout << "Element not found" << std::endl;
+            std::cerr << "Element not found" << std::endl;
         }
         std::cout << *easyfind(l, 11) << std::endl;
     }
@@ -40,7 +40,7 @@ int main(void)
         }
         catch (std::exception &e)
         {
-            std::cout << "Element not found" << std::endl;
+            std::cerr << "Element not found" << std::endl;
         }
         std::cout << *easyfind(v, 11) << std::endl;
     }
