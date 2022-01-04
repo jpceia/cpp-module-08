@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
+/*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 22:41:38 by jpceia            #+#    #+#             */
-/*   Updated: 2021/12/23 03:49:49 by jpceia           ###   ########.fr       */
+/*   Updated: 2022/01/04 15:01:36 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,32 @@
 
 int main(void)
 {
-    std::vector<int> v = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    std::list<int> l = {99, 50, 25, 10, 5, 1};
+    int arr[] = {99, 88, 77, 66, 55, 44, 33, 22, 11};
 
-    try
+    // test for list
     {
-        std::cout << *easyfind(v, 42) << std::endl;
+        std::list<int> l(arr, arr + sizeof(arr) / sizeof(arr[0]));
+        try
+        {
+            std::cout << *easyfind(l, 42) << std::endl;
+        }
+        catch (std::exception &e)
+        {
+            std::cout << "Element not found" << std::endl;
+        }
+        std::cout << *easyfind(l, 11) << std::endl;
     }
-    catch (std::exception &e)
+    // test for vector
     {
-        std::cout << "Element not found" << std::endl;
+        std::vector<int> v(arr, arr + sizeof(arr) / sizeof(arr[0]));
+        try
+        {
+            std::cout << *easyfind(v, 42) << std::endl;
+        }
+        catch (std::exception &e)
+        {
+            std::cout << "Element not found" << std::endl;
+        }
+        std::cout << *easyfind(v, 11) << std::endl;
     }
-
-    std::cout << *easyfind(v, 2) << std::endl;
-    std::cout << *easyfind(l, 99) << std::endl;
 }
