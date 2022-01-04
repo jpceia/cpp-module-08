@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 23:53:31 by jpceia            #+#    #+#             */
-/*   Updated: 2021/12/20 00:14:36 by jpceia           ###   ########.fr       */
+/*   Updated: 2022/01/04 22:07:45 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ class Span
         Span &operator=(Span const &rhs);
 
         // Other methods
-        void addNumber(int n);
+        void addNumber(int k);
         int shortestSpan(void);
         int longestSpan(void);
 };

@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 23:52:52 by jpceia            #+#    #+#             */
-/*   Updated: 2021/12/23 03:59:28 by jpceia           ###   ########.fr       */
+/*   Updated: 2022/01/04 19:09:36 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,10 @@ Span& Span::operator=(const Span& rhs)
     return *this;
 }
 
-void Span::addNumber(int n)
+void Span::addNumber(int k)
 {
     if (_v.size() < _n)
-        _v.push_back(n);
+        _v.push_back(k);
     else
         throw std::exception();
 }
