@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
+/*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 23:11:27 by jpceia            #+#    #+#             */
-/*   Updated: 2021/12/23 03:59:20 by jpceia           ###   ########.fr       */
+/*   Updated: 2022/01/05 13:46:20 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,11 @@ int main()
         std::cerr << "Exceeded maximum number of elements" << std::endl;
     }
     // example with many elements
-    Span sp2 = Span(10000);
+    Span sp2 = Span(15000);
+    int arr[10000];
     for (int i = 0; i < 10000; i++)
-        sp2.addNumber(500 + 10 * i);
+        arr[i] = 500 + 10 * i;
+    sp2.addNumbers(arr, 10000);
     std::cout << sp2.shortestSpan() << std::endl;
     std::cout << sp2.longestSpan() << std::endl;
 }
