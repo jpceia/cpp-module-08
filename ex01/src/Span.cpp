@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
+/*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 23:52:52 by jpceia            #+#    #+#             */
-/*   Updated: 2022/01/04 19:09:36 by jpceia           ###   ########.fr       */
+/*   Updated: 2022/01/05 13:45:57 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,14 @@ void Span::addNumber(int k)
         _v.push_back(k);
     else
         throw std::exception();
+}
+
+void Span::addNumbers(int *arr, std::size_t len)
+{
+    if (len > _n)
+        throw std::exception();
+    for (unsigned int i = 0; i < len; i++)
+        _v.push_back(arr[i]);
 }
 
 int Span::shortestSpan(void)

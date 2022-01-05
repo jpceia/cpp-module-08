@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
+/*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 23:53:31 by jpceia            #+#    #+#             */
-/*   Updated: 2022/01/04 22:07:45 by jpceia           ###   ########.fr       */
+/*   Updated: 2022/01/05 13:43:47 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ class Span
 
         // Other methods
         void addNumber(int k);
+        void addNumbers(int *arr, std::size_t len);
         int shortestSpan(void);
         int longestSpan(void);
 };
