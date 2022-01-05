@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
+/*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 00:17:15 by jpceia            #+#    #+#             */
-/*   Updated: 2021/12/20 00:20:33 by jpceia           ###   ########.fr       */
+/*   Updated: 2022/01/05 13:51:33 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,17 @@ int main()
         ++it;
     }
     std::stack<int> s(mstack);
+
+    // more tests
+    MutantStack<std::string> mstack2;
+    for (int i = 0; i < 10; i++)
+        mstack2.push("str_" + std::to_string(i));
+    MutantStack<std::string>::iterator it2 = mstack2.begin();
+    MutantStack<std::string>::iterator ite2 = mstack2.end();
+    while (it2 != ite2)
+    {
+        std::cout << *it2 << std::endl;
+        ++it2;
+    }
     return 0;
 }
